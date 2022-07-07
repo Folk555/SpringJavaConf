@@ -9,7 +9,7 @@ public class TestSpring {
 
     public static void main(String[] args) {
         //получение контектса по аннотациям
-        ApplicationContext contextAnnotation = new AnnotationConfigApplicationContext("org.examples");
+        ApplicationContext contextAnnotation = new AnnotationConfigApplicationContext(SpringConfig.class);
 
         //Получение контекста по XML
         //ApplicationContext context2 = new ClassPathXmlApplicationContext("appContext.xml");

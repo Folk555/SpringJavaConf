@@ -3,7 +3,6 @@ package org.examples;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Classic extends AbstractGenre implements IGenre{
     @Override
     public void playGenre() {

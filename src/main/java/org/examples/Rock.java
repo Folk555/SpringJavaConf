@@ -2,7 +2,6 @@ package org.examples;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class Rock extends AbstractGenre implements IGenre {
 
     public Rock(String... str) {

@@ -8,11 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
-@Component("player")
-@PropertySource("application.properties") //подключаем файл properties
 //@Scope("prototype") //Будет создаваться новый бин
 // при каждом запросе из контекста. singelton - ссылка на  единый существующий бин
 public class Player {
@@ -57,18 +53,5 @@ public class Player {
         this.genre = genre;
     }
 
-    /***
-     * @PostConstruct и @PreDestroy работают для singelton по 1 разу
-     * В случае prototype работает только @PostConstruct для каждого бина. @PreDestroy не работает.
-     */
-    @PostConstruct
-    public void doInit(){
-        System.out.println("Init");
-    }
-
-    @PreDestroy
-    public void doDestroy(){
-        System.out.println("Dest");
-    }
 
 }
